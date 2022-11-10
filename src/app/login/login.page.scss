@@ -1,9 +1,15 @@
 ion-content{
   --background: linear-gradient(to right, #0000ff, #ff0000);
+
 }
 
 ion-card{
-  border: solid #000;
+  border: 3px solid transparent;
+    border-image: linear-gradient(to right, #ff0000, #0000ff);
+    border-image-slice: 1;
+
+
+
   --background: linear-gradient(to right, #00007d, #7d0000);
   margin: 50vw 10vw 10vw 10vw;
   padding: auto;
@@ -16,7 +22,6 @@ ion-card{
     margin: 0.7vw  0.7vw 0.7vw 0.7vw;
     border-radius: 10px;
     border: solid #000;
-
   }
   ion-button{
     display: flex;
@@ -35,4 +40,44 @@ ion-button{
 
   border-radius: 10px;
   border: solid #000;
+  animation-direction: alternate rolagem;
 }
+
+@keyframes rolagem {
+  0% {
+    --background: linear-gradient(to top right, #0000ff, #ff0000);
+  }
+
+  10% {
+    --background: linear-gradient(to right, #0000ff, #ff0000);
+  }
+
+  25% {
+    --background: linear-gradient(to right bottom, #0000ff, #ff0000);
+  }
+
+  40% {
+    --background: linear-gradient(to bottom, #0000ff, #ff0000);
+  }
+
+  50% {
+    --background: linear-gradient(to bottom left, #0000ff, #ff0000);
+  }
+
+  60% {
+    --background: linear-gradient(to left, #0000ff, #ff0000);
+  }
+
+  75% {
+    --background: linear-gradient(to left top, #0000ff, #ff0000);
+  }
+
+  85% {
+    --background: linear-gradient(to top, #0000ff, #ff0000);
+  }
+
+  100% {
+    --background: linear-gradient(to top right, #0000ff, #ff0000);
+  }
+}
+
