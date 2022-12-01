@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -10,6 +11,8 @@ import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { Drivers } from '@ionic/storage';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -17,7 +20,7 @@ import { Drivers } from '@ionic/storage';
     AppRoutingModule,
     IonicStorageModule.forRoot({
       driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
-    })
+    }),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
