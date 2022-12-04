@@ -1,5 +1,8 @@
+import { StorageService } from './../services/storage.service';
+import { Produto } from './../models/Produto';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -7,7 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage {
+
   formRegistro: FormGroup;
+  produto: Produto = new Produto();
 
   mensagens = {
     nome: [
@@ -34,7 +39,7 @@ export class RegistroPage {
     preco: [{ tipo: 'required', mensagem: 'É obrigatório confirmar PREÇO.' }],
   };
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private storageService: StorageService, private route: Router) {
     this.formRegistro = this.formBuilder.group({
       nome: [
         '',
@@ -53,7 +58,17 @@ export class RegistroPage {
     });
   }
 
-  salvarRegistro() {
-    console.log('Formulário: ', this.formRegistro.valid);
+  async salvarRegistro() {
+    if(this.formRegistro.valid){
+      this.produto.nome = this.formRegistro.value.nome;
+      this.produto.descricao = this.formRegistro.value.descricao;
+      this.produto.validade = this.formRegistro.value.validade;
+      this.produto.preco = this.formRegistro.value.preco;
+      await this.storageService.set(this.produto.nome, this.produto.descricao);
+      this.route.navigateByUrl('/tabs/tab1');
+    }
+    else{
+      alert('Formulário Inválido');
+    }
   }
 }
