@@ -18,8 +18,14 @@ export class Tab1Page {
   }
 
 
-  //ionViewDidEnter serve para a função ser realizada depois da criação do banco (É isso né professor?)
-  ionViewDidEnter(){
+  ionViewDidEnter() {
+    this.buscarProduto();
+    console.log('aaa');
+  }
+
+  async excluirProduto(nome: string){
+    await this.storageService.remove(nome);
     this.buscarProduto();
   }
+
 }

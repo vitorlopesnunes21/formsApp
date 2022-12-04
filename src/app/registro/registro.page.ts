@@ -50,8 +50,8 @@ export class RegistroPage {
         '',
         Validators.compose([
           Validators.required,
-          Validators.minLength(8),
-          Validators.maxLength(8),
+          Validators.minLength(10),
+          Validators.maxLength(10),
         ]),
       ],
       preco: ['', Validators.compose([Validators.required])],
@@ -64,7 +64,7 @@ export class RegistroPage {
       this.produto.descricao = this.formRegistro.value.descricao;
       this.produto.validade = this.formRegistro.value.validade;
       this.produto.preco = this.formRegistro.value.preco;
-      await this.storageService.set(this.produto.nome, this.produto.descricao);
+      await this.storageService.set(this.produto.nome, this.produto);
       this.route.navigateByUrl('/tabs/tab1');
     }
     else{

@@ -38,6 +38,7 @@ export class StorageService {
     this._storage.forEach((value, key, index) => {
       lista.push(value);
     });
+    console.log(lista);
     return lista;
   }
 }
