@@ -11,20 +11,21 @@ export class Tab1Page {
 
   listaProduto: Produto[] = [];
 
-  constructor(private storageService: StorageService) {}
+  constructor(private storageService: StorageService) {
+    this.buscarProduto();
+  }
 
   async buscarProduto() {
     this.listaProduto = await this.storageService.getAll();
   }
 
-
-  ionViewDidEnter() {
-    this.buscarProduto();
-    console.log('aaa');
-  }
-
   async excluirProduto(nome: string){
     await this.storageService.remove(nome);
+    this.buscarProduto();
+  }
+
+  ionViewWillEnter() {
+    console.log('teste');
     this.buscarProduto();
   }
 

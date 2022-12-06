@@ -33,12 +33,14 @@ export class StorageService {
     this._storage?.remove(key);
   }
 
-  public getAll(){
+  public async getAll(){
     const lista = [];
+    if (this._storage == null) {
+      await this.init();
+    }
     this._storage.forEach((value, key, index) => {
       lista.push(value);
     });
-    console.log(lista);
     return lista;
   }
 }
