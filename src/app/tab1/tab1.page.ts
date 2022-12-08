@@ -17,10 +17,16 @@ export class Tab1Page {
 
   async buscarProduto() {
     this.listaProduto = await this.storageService.getAll();
+    console.log(this.listaProduto);
   }
 
   async excluirProduto(nome: string){
     await this.storageService.remove(nome);
+    this.buscarProduto();
+  }
+
+  ionViewDidEnter() {
+    console.log('teste');
     this.buscarProduto();
   }
 

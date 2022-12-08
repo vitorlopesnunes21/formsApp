@@ -1,11 +1,16 @@
-ion-toolbar{
-
-  ion-buttons{
-    ion-button{
-      ion-icon{
+ion-toolbar {
+  --background: blue;
+  color: #fff;
+  ion-title {
+    text-align: center;
+  }
+  ion-buttons {
+    ion-button {
+      ion-icon {
         font-size: 9rem;
-        color: red;
+        color: rgb(255, 255, 255);
       }
     }
   }
 }
+

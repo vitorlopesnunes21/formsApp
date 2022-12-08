@@ -37,8 +37,9 @@ export class StorageService {
     const lista = [];
     if (this._storage == null) {
       await this.init();
+      console.log('teste1');
     }
-    this._storage.forEach((value, key, index) => {
+    await this._storage.forEach((value, key, index) => {
       lista.push(value);
     });
     return lista;
