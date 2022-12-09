@@ -1,13 +1,12 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-
+  <ion-toolbar color="color1">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/login"></ion-back-button>
     </ion-buttons>
 
     <ion-buttons slot="secondary">
       <ion-button routerLink="/registro">
-        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+        <ion-icon slot="icon-only" name="bag-add-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
 
@@ -20,11 +19,11 @@
     <ion-item>
       <ion-label>
         <div>
-          <h1>{{prod.nome}}</h1>
+          <b><h1>{{prod.nome}}</h1></b>
           <span>{{prod.descricao}}</span>
           <span style="float: right">{{prod.validade}}</span>
           <br />
-          <span style="float: right">{{prod.preco}}</span>
+          <span style="float: right">R$ {{prod.preco}}</span>
         </div>
       </ion-label>
     </ion-item>

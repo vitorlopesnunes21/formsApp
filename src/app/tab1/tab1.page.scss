@@ -1,16 +1,24 @@
-ion-toolbar {
-  --background: blue;
-  color: #fff;
-  ion-title {
-    text-align: center;
-  }
-  ion-buttons {
-    ion-button {
-      ion-icon {
-        font-size: 9rem;
-        color: rgb(255, 255, 255);
-      }
+ion-header {
+  ion-toolbar {
+    color: #000;
+    ion-title {
+      text-align: center;
+      font-size: 8vw;
     }
   }
 }
 
+ion-content{
+  --background: #90ffff;
+  ion-item-sliding{
+    box-shadow: 5px 5px 5px black;
+    margin-top: 4vw;
+    ion-label{
+      font-size: 6vw;
+      h1{
+        font-size: 8vw;
+      }
+    }
+
+  }
+}

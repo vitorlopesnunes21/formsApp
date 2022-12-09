@@ -1,17 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+  <ion-toolbar color="color1">
+    <ion-title> Sobre o App </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Criação</ion-card-title>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card-content>
+      O aplicativo FormsApp foi desenvolvido em aulas da matéria de PAM
+      (Programação de Aplicativosd Mobile), do curos de Desenvolvimento de
+      Sistemas (2022) na escola Etec Cidade do Livro como atividade
+      avaliativa.</ion-card-content
+    >
+  </ion-card>
+
+  <ion-card color="primary">
+    <img
+      alt=""
+      src="https://img.freepik.com/free-vector/sticker-empty-box-opened-white-background_1308-68243.jpg?w=2000"
+    />
+    <ion-card-header>
+      <ion-card-title>Função</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      A principal função do aplicativo é registrar e armazenar produtos. Ao
+      registrar um produto (botão de inserir disponível em 'Produtos') talvez
+      ele não apareça na página como registrado, basta recarregar a página que o
+      produto estará la (bug será corrigido em futuras atualizações).
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,21 @@
+ion-header {
+  ion-toolbar {
+    color: #000;
+    ion-title {
+      text-align: center;
+      font-size: 8vw;
+    }
+  }
+}
+ion-content{
+  ion-card{
+    ion-card-header{
+      ion-card-title{
+        font-size: 7vw;
+      }
+    }
+    ion-card-content{
+      font-size: 5vw;
+    }
+  }
+}
