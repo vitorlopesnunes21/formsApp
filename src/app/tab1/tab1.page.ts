@@ -12,6 +12,7 @@ export class Tab1Page {
   listaProduto: Produto[] = [];
 
   constructor(private storageService: StorageService) {
+    alert('Esse aplicativo está em desenvolvimento. Recarregue a página para aparecer o produto');
     this.buscarProduto();
   }
 
@@ -19,20 +20,22 @@ export class Tab1Page {
     this.listaProduto = await this.storageService.getAll();
     console.log(this.listaProduto);
   }
-
-  async excluirProduto(nome: string){
-    await this.storageService.remove(nome);
-    this.buscarProduto();
-  }
-
   ionViewDidEnter() {
-    console.log('teste');
+    console.log('testeDid');
     this.buscarProduto();
   }
 
   ionViewWillEnter() {
-    console.log('teste');
+    console.log('testeWill');
     this.buscarProduto();
   }
+
+
+  async excluirProduto(nome: string) {
+    await this.storageService.remove(nome);
+    this.buscarProduto();
+  }
+
+
 
 }
