@@ -82,6 +82,14 @@
   --ion-color-color1-contrast-rgb: 0, 0, 0;
   --ion-color-color1-shade: #00c9e0;
   --ion-color-color1-tint: #1ae7ff;
+
+  //** color2 **/
+  --ion-color-color2: #c3ffff;
+	--ion-color-color2-rgb: 195,255,255;
+	--ion-color-color2-contrast: #000000;
+	--ion-color-color2-contrast-rgb: 0,0,0;
+	--ion-color-color2-shade: #ace0e0;
+	--ion-color-color2-tint: #c9ffff;
 }
 .ion-color-color1 {
   --ion-color-base: var(--ion-color-color1);
@@ -92,12 +100,35 @@
   --ion-color-tint: var(--ion-color-color1-tint);
 }
 
-/**
-@media (prefers-color-scheme: dark) {
+.ion-color-color2 {
+	--ion-color-base: var(--ion-color-color2);
+	--ion-color-base-rgb: var(--ion-color-color2-rgb);
+	--ion-color-contrast: var(--ion-color-color2-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-color2-contrast-rgb);
+	--ion-color-shade: var(--ion-color-color2-shade);
+	--ion-color-tint: var(--ion-color-color2-tint);
+}
 
-   Dark Colors
+/* @media (prefers-color-scheme: dark) { */
 
-  body {
+   //Dark Colors
+
+  body[color-theme= "dark"] {
+
+    --ion-color-color1: #215063;
+    --ion-color-color1-rgb: 33,80,99;
+    --ion-color-color1-contrast: #ffffff;
+    --ion-color-color1-contrast-rgb: 255,255,255;
+    --ion-color-color1-shade: #1d4657;
+    --ion-color-color1-tint: #376273;
+
+    --ion-color-color2: #394e5b;
+	--ion-color-color2-rgb: 57,78,91;
+	--ion-color-color2-contrast: #ffffff;
+	--ion-color-color2-contrast-rgb: 255,255,255;
+	--ion-color-color2-shade: #324550;
+	--ion-color-color2-tint: #4d606b;
+
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66, 140, 255;
     --ion-color-primary-contrast: #ffffff;
@@ -163,10 +194,10 @@
   }
 
 
-    iOS Dark Theme
+    //iOS Dark Theme
 
 
-  .ios body {
+  .ios body[color-theme= "dark"] {
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0, 0, 0;
 
@@ -204,10 +235,10 @@
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
 
-   Material Design Dark Theme
+   //Material Design Dark Theme
 
 
-  .md body {
+  .md body[color-theme= "dark"] {
     --ion-background-color: #121212;
     --ion-background-color-rgb: 18, 18, 18;
 
@@ -244,4 +275,4 @@
 
     --ion-card-background: #1e1e1e;
   }
-} **/
+/* } */

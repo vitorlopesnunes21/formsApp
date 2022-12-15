@@ -1,6 +1,5 @@
 ion-header {
   ion-toolbar {
-    color: #000;
     ion-title {
       text-align: center;
       font-size: 8vw;
@@ -9,7 +8,7 @@ ion-header {
 }
 
 ion-content {
-  --background: #c3ffff;
+
 
   ion-card{
     margin: 2vw 4vw;
@@ -22,7 +21,6 @@ ion-content {
       font-size: 5vw;
       ion-icon{
         font-size: 15vw;
-        color: #000000;
         align-items: center;
       }
     }
@@ -43,7 +41,7 @@ ion-content {
       --background-checked: #ddd;
 
       --handle-background: #7ce0ff;
-      --handle-background-checked: #024f66;
+      --handle-background-checked: #00c3ff;
 
       --handle-width: 25px;
       --handle-height: 27px;

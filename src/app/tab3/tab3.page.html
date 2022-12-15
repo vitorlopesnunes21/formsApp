@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="color2">
   <ion-card>
     <img alt="aa" src="https://avatars.githubusercontent.com/u/79660123?s=400&u=2663ce6a499293532c18958f87c62e8cd4ba28e5&v=4" />
     <ion-card-header>
@@ -22,6 +22,6 @@
 
   <ion-item>
     <ion-label>Dark Mode</ion-label>
-    <ion-toggle ></ion-toggle>
+    <ion-toggle (ionChange)='trocarTema($event)'></ion-toggle>
   </ion-item>
 </ion-content>
