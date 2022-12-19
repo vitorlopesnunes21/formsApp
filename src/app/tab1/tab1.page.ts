@@ -12,7 +12,7 @@ export class Tab1Page {
   listaProduto: Produto[] = [];
 
   constructor(private storageService: StorageService) {
-    alert('Esse aplicativo está em desenvolvimento. Recarregue a página para aparecer o produto');
+    //alert('Esse aplicativo está em desenvolvimento. Recarregue a página para aparecer o produto');
     this.buscarProduto();
   }
 
@@ -20,15 +20,16 @@ export class Tab1Page {
     this.listaProduto = await this.storageService.getAll();
     console.log(this.listaProduto);
   }
+
   ionViewDidEnter() {
     console.log('testeDid');
     this.buscarProduto();
   }
 
-  ionViewWillEnter() {
+  /**ionViewWillEnter() {
     console.log('testeWill');
     this.buscarProduto();
-  }
+  }*/
 
 
   async excluirProduto(nome: string) {

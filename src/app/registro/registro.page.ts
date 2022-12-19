@@ -40,6 +40,7 @@ export class RegistroPage {
     preco: [{ tipo: 'required', mensagem: 'É obrigatório confirmar PREÇO.' }],
   };
 
+
   constructor(private formBuilder: FormBuilder, private storageService: StorageService, private route: Router) {
     this.formRegistro = this.formBuilder.group({
       nome: [
@@ -60,16 +61,18 @@ export class RegistroPage {
   }
 
   async salvarRegistro() {
-    if(this.formRegistro.valid){
+    if (this.formRegistro.valid) {
       this.produto.nome = this.formRegistro.value.nome;
       this.produto.descricao = this.formRegistro.value.descricao;
       this.produto.validade = this.formRegistro.value.validade;
       this.produto.preco = this.formRegistro.value.preco;
       await this.storageService.set(this.produto.nome, this.produto);
-      this.route.navigateByUrl('/tabs/tab1');
+      await this.route.navigateByUrl('/tabs/tab1');
+       window.location.reload();
     }
-    else{
+    else {
       alert('Formulário Inválido');
     }
+
   }
 }
