@@ -8,53 +8,19 @@ ion-header {
 }
 
 ion-content {
-
-
-  ion-card{
+  ion-card {
     margin: 2vw 4vw;
-    ion-card-header{
-      ion-card-title{
+    ion-card-header {
+      ion-card-title {
         font-size: 7vw;
       }
     }
-    ion-card-content{
+    ion-card-content {
       font-size: 5vw;
-      ion-icon{
+      ion-icon {
         font-size: 15vw;
         align-items: center;
       }
-    }
-  }
-
-  ion-item {
-    margin: 0 4vw;
-    ion-label {
-      font-size: 6vw;
-    }
-
-    ion-toggle {
-      height: 10px;
-      width: 65px;
-
-      padding: 12px;
-
-      --background: #ddd;
-      --background-checked: #ddd;
-
-      --handle-background: #7ce0ff;
-      --handle-background-checked: #00c3ff;
-
-      --handle-width: 25px;
-      --handle-height: 27px;
-      --handle-max-height: auto;
-      --handle-spacing: 2px;
-
-      --handle-border-radius: 40px;
-      --handle-box-shadow: none;
-
-      /* Required for iOS handle to overflow the height of the track */
-      overflow: visible;
-      contain: none;
     }
   }
 }

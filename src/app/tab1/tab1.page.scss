@@ -8,20 +8,15 @@ ion-header {
   }
 }
 
-ion-content{
-  ion-button{
-    display: flex;
-    justify-content: center;
-  }
-  ion-item-sliding{
+ion-content {
+  ion-item-sliding {
     box-shadow: 4px 4px 4px black;
     margin-top: 4vw;
-    ion-label{
+    ion-label {
       font-size: 6vw;
-      h1{
+      h1 {
         font-size: 8vw;
       }
     }
-
   }
 }
